@@ -1,0 +1,74 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/luoxuhai/Desktop/PCL_Example -B /Users/luoxuhai/Desktop/PCL_Example/cmake-build-debug
+-- Eigen found (include: /opt/homebrew/include/eigen3, version: 3.4.0)
+** WARNING ** io features related to pcap will be disabled
+** WARNING ** io features related to png will be disabled
+CMake Warning at /opt/homebrew/lib/cmake/vtk-9.0/VTK-vtk-module-find-packages.cmake:209 (find_package):
+  By not providing "FindQt5.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Qt5", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5" (requested
+  version 5.15) with any of the following names:
+
+    Qt5Config.cmake
+    qt5-config.cmake
+
+  Add the installation prefix of "Qt5" to CMAKE_PREFIX_PATH or set "Qt5_DIR"
+  to a directory containing one of the above files.  If "Qt5" provides a
+  separate development package or SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  /opt/homebrew/lib/cmake/vtk-9.0/vtk-config.cmake:131 (include)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:276 (find_package)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:325 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:536 (find_external_library)
+  CMakeLists.txt:6 (find_package)
+
+
+-- Could not find the VTK package due to a missing dependency: Qt5
+CMake Warning at /opt/homebrew/lib/cmake/vtk-9.0/VTK-vtk-module-find-packages.cmake:1149 (find_package):
+  By not providing "FindQt5.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Qt5", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5" (requested
+  version 5.15) with any of the following names:
+
+    Qt5Config.cmake
+    qt5-config.cmake
+
+  Add the installation prefix of "Qt5" to CMAKE_PREFIX_PATH or set "Qt5_DIR"
+  to a directory containing one of the above files.  If "Qt5" provides a
+  separate development package or SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  /opt/homebrew/lib/cmake/vtk-9.0/vtk-config.cmake:131 (include)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:276 (find_package)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:325 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:536 (find_external_library)
+  CMakeLists.txt:6 (find_package)
+
+
+-- Could not find the VTK package due to a missing dependency: Qt5
+CMake Warning at /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:276 (find_package):
+  Found package configuration file:
+
+    /opt/homebrew/lib/cmake/vtk-9.0/vtk-config.cmake
+
+  but it set VTK_FOUND to FALSE so package "VTK" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Could not find the VTK package with the following required components:
+  GUISupportQt, RenderingQt.
+
+Call Stack (most recent call first):
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:325 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:536 (find_external_library)
+  CMakeLists.txt:6 (find_package)
+
+
+** WARNING ** io features related to vtk will be disabled
+-- looking for PCL_COMMON
+-- looking for PCL_OCTREE
+-- looking for PCL_IO
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/luoxuhai/Desktop/PCL_Example/cmake-build-debug
