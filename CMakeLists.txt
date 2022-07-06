@@ -7,6 +7,6 @@ find_package(PCL 1.3 REQUIRED COMPONENTS common io)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
-add_executable(PCL_Example src/main.cpp)
+add_executable(PCL_Example src/main.cpp src/write_pcd_file.cpp include/write_pcd_file.h)
 target_link_libraries(PCL_Example ${PCL_LIBRARIES})
 
