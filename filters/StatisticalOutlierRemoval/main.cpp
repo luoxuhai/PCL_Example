@@ -2,8 +2,7 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 #include <pcl/filters/statistical_outlier_removal.h>
-
-using namespace std::chrono;
+#include <chrono>
 
 int main()
 {
@@ -16,7 +15,7 @@ int main()
 
     // 创建滤波器，对每个点分析的临近点的个数设置为50 ，并将标准差的倍数设置为1  这意味着如果一
     //个点的距离超出了平均距离一个标准差以上，则该点被标记为离群点，并将它移除，存储起来
-    auto start = system_clock::now();
+    auto start = std::chrono::system_clock::now();
 
     pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor; //创建滤波器对象
     sor.setInputCloud(cloud);                          //设置待滤波的点云
@@ -34,10 +33,10 @@ int main()
     // sor.filter(*cloud_filtered);
     // writer.write<pcl::PointXYZ>("../table_scene_lms400_outliers.pcd", *cloud_filtered, false);
 
-    auto end = system_clock::now();
-    auto duration = duration_cast<microseconds>(end - start);
+    auto end = std::chrono::system_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
     std::cout << "花费了"
-              << double(duration.count()) * microseconds::period::num / microseconds::period::den
+              << double(duration.count()) * std::chrono::microseconds::period::num / std::chrono::microseconds::period::den
               << "秒" << std::endl;
     return 0;
 }
